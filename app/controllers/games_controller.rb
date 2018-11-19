@@ -15,8 +15,6 @@ class GamesController < ApplicationController
     grid = params[:grid]
     @result = score_and_message(user_input, grid, time)
     @score = @result[0]
-    session[:score] = @score
-    raise
     @sentence = @result[1]
   end
 
